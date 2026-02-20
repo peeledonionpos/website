@@ -5,8 +5,8 @@ import matter from "gray-matter";
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 // Replace these with your actual repo details
-const owner = "your-github-username";
-const repo = "your-repo-name";
+const owner = "peeledonionpos";
+const repo = "website";
 
 export async function publishBlogToGithub(formData: any) {
     const { title, description, author, slug, sections } = formData;
