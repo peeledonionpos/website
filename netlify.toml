@@ -5,3 +5,8 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/blogs/*"
+  to = "/blogs/:splat"
+  status = 200
