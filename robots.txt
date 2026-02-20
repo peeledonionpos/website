@@ -1,0 +1,8 @@
+# PeeledOnion Robots.txt
+# https://peeledonion.in/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://peeledonion.in/sitemap.xml
