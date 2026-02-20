@@ -35,7 +35,7 @@ export default function BlogsIndex() {
                             <p className="text-gray-500 font-medium">No blog posts found. Head to /admin to create some!</p>
                         </div>
                     ) : (
-                        blogs.map((blog: any) => (
+                        blogs.map((blog: NonNullable<ReturnType<typeof getAllBlogs>[0]>) => (
                             <article key={blog.slug} className="group flex flex-col items-start border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition duration-300 bg-white">
                                 <div className="w-full flex justify-between items-center mb-4">
                                     <span className="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">

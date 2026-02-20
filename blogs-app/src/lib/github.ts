@@ -8,11 +8,11 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const owner = "peeledonionpos";
 const repo = "website";
 
-export async function publishBlogToGithub(formData: any) {
+export async function publishBlogToGithub(formData: { title: string, description: string, author: string, slug: string, sections: { title: string, content: string }[] }) {
     const { title, description, author, slug, sections } = formData;
 
     // Create markdown body from sections
-    const markdownBody = sections.map((sec: any) => `## ${sec.title}\n\n${sec.content}`).join("\n\n");
+    const markdownBody = sections.map((sec) => `## ${sec.title}\n\n${sec.content}`).join("\n\n");
 
     // Add YAML Frontmatter
     const finalMarkdown = matter.stringify(markdownBody, {
@@ -34,10 +34,10 @@ export async function publishBlogToGithub(formData: any) {
                 repo,
                 path,
             });
-            // @ts-ignore
+            // @ts-expect-error - GitHub typing for data might vary based on array vs single object
             sha = data.sha;
-        } catch (e: any) {
-            if (e.status !== 404) throw e;
+        } catch (e: unknown) {
+            if ((e as { status?: number }).status !== 404) throw e;
         }
 
         // Create or update the file

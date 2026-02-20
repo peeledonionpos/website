@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { publishBlogAction } from "./actions"; // Server action to publish to github
+import { publishBlogAction } from "@/app/blogs/admin/actions"; // Server action to publish to github
 import { Save, Plus, Trash2 } from "lucide-react";
 
 export default function AdminPage() {
@@ -31,10 +31,9 @@ export default function AdminPage() {
     };
 
     const updateSection = (index: number, field: string, value: string) => {
-        const newSections = [...sections];
-        // @ts-ignore
-        newSections[index][field] = value;
-        setSections(newSections);
+        setSections((prev) =>
+            prev.map((sec, i) => (i === index ? { ...sec, [field]: value } : sec))
+        );
     };
 
     const removeSection = (index: number) => {
@@ -54,7 +53,8 @@ export default function AdminPage() {
             } else {
                 alert("Publish failed. See console mapping.");
             }
-        } catch (e) {
+        } catch (e: unknown) {
+            console.error(e);
             alert("An error occurred");
         } finally {
             setPublishing(false);
