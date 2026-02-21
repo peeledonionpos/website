@@ -113,15 +113,25 @@
     if (!container) return;
     var btn = container.querySelector('.navbar__toggle');
     var menu = document.getElementById('navbar__menu');
+    var backdrop = container.querySelector('.navbar__backdrop');
     if (!btn || !menu) return;
-    btn.addEventListener('click', function () {
-      var isOpen = menu.classList.toggle('is-open');
+    function setMenuOpen(isOpen) {
+      menu.classList.toggle('is-open', isOpen);
+      if (container) container.classList.toggle('is-menu-open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
       btn.setAttribute('aria-expanded', isOpen);
       var iconEl = btn.querySelector('.icon');
       if (iconEl) iconEl.className = 'icon icon--lg ' + (isOpen ? 'icon-close' : 'icon-menu');
       btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    }
+    btn.addEventListener('click', function () {
+      setMenuOpen(!menu.classList.contains('is-open'));
     });
+    if (backdrop) {
+      backdrop.addEventListener('click', function () {
+        setMenuOpen(false);
+      });
+    }
   }
 
   function injectMockup() {
@@ -137,6 +147,10 @@
     var footerEl = document.getElementById('layout-footer');
     if (navEl) {
       navEl.innerHTML = getNavHTML();
+      var backdrop = document.createElement('div');
+      backdrop.className = 'navbar__backdrop';
+      backdrop.setAttribute('aria-hidden', 'true');
+      navEl.appendChild(backdrop);
       attachMenuToggle(navEl);
     }
     if (footerEl) footerEl.innerHTML = getFooterHTML();

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | PeeledOnion</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="refresh" content="5;url=index.html">
+  <meta name="theme-color" content="#007CFF">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="layout-nav"></div>
+
+  <main id="main-content">
+    <section class="section" aria-label="Page not found">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <h1 class="title-serif">Page not found</h1>
+          <p>The page you’re looking for doesn’t exist or has been moved.</p>
+          <p>Redirecting you to the homepage in <span id="countdown">5</span> seconds…</p>
+          <div class="btn-group btn-group--center">
+            <a href="index.html" class="btn btn--primary">Go to homepage now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="layout-footer"></div>
+  <script src="js/layout.js"></script>
+  <script>
+    (function () {
+      var seconds = 5;
+      var el = document.getElementById('countdown');
+      var interval = setInterval(function () {
+        seconds--;
+        if (el) el.textContent = seconds > 0 ? seconds : '0';
+        if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = 'index.html';
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+
+</html>

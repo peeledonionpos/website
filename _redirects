@@ -24,3 +24,5 @@
 /gst-billing-software  /gst-billing-software.html  200
 /inventory-management  /inventory-management.html  200
 /mobile-restaurant-billing-software  /mobile-restaurant-billing-software.html  200
+# Catch-all: 404 and all other errors show custom error page
+/*  /404.html  404
