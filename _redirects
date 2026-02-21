@@ -1,0 +1,15 @@
+# Pretty URLs: serve .html when clean path is requested
+/  /index.html  200
+/contact  /contact.html  200
+/about  /about.html  200
+/features  /features.html  200
+/pricing  /pricing.html  200
+/terms  /terms.html  200
+/privacy-policy  /privacy-policy.html  200
+/restaurant-billing-software  /restaurant-billing-software.html  200
+/restaurant-pos-billing  /restaurant-pos-billing.html  200
+/gst-billing-software  /gst-billing-software.html  200
+/inventory-management  /inventory-management.html  200
+/mobile-restaurant-billing-software  /mobile-restaurant-billing-software.html  200
+# Strip .html from URL (rewrite so /terms.html is served as /terms)
+/*.html  /:splat  200

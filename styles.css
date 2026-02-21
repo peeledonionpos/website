@@ -73,6 +73,8 @@
 *::after {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
 }
 
@@ -442,16 +444,17 @@ p {
 
 .navbar__menu {
   display: none;
-  position: fixed;
-  top: 60px;
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: calc(100vh - 60px);
   background: var(--color-white);
-  padding: var(--space-8) var(--space-6);
+  padding: var(--space-6);
   z-index: 100;
   flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top: 1px solid var(--color-grey-divider);
+  max-height: 70vh;
   overflow-y: auto;
 }
 

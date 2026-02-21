@@ -21,13 +21,13 @@
     return (
       '<header class="navbar" role="banner">' +
       '<div class="container navbar__inner">' +
-      '<a href="index.html" class="navbar__logo" aria-label="PeeledOnion Home"><img src="images/logo.png" alt="PeeledOnion" class="navbar__logo-img" width="160" height="36"></a>' +
+      '<a href="/" class="navbar__logo" aria-label="PeeledOnion Home"><img src="images/logo.png" alt="PeeledOnion" class="navbar__logo-img" width="160" height="36"></a>' +
       '<button type="button" class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar__menu">' +
       '<span class="icon icon-menu icon--lg" aria-hidden="true"></span></button>' +
       '<nav id="navbar__menu" class="navbar__menu" role="navigation" aria-label="Main navigation">' +
       '<ul class="navbar__links">' +
-      '<li><a href="features.html" class="navbar__link">Features</a></li>' +
-      '<li><a href="pricing.html" class="navbar__link">Pricing</a></li>' +
+      '<li><a href="/features" class="navbar__link">Features</a></li>' +
+      '<li><a href="/pricing" class="navbar__link">Pricing</a></li>' +
       '<li><a href="' + blogUrl + '" class="navbar__link" target="_blank" rel="noopener noreferrer">Blogs</a></li>' +
       '</ul>' +
       '<div class="navbar__cta navbar__cta--mobile">' +
@@ -58,29 +58,29 @@
       '<div>' +
       '<p class="footer__heading">Product</p>' +
       '<ul class="footer__links">' +
-      '<li><a href="features.html">Features</a></li>' +
-      '<li><a href="pricing.html">Pricing</a></li>' +
+      '<li><a href="/features">Features</a></li>' +
+      '<li><a href="/pricing">Pricing</a></li>' +
       '<li><a href="' + blogUrl + '" target="_blank" rel="noopener noreferrer">Blogs</a></li>' +
-      '<li><a href="about.html">About</a></li>' +
+      '<li><a href="/about">About</a></li>' +
       '</ul>' +
       '</div>' +
       '<div>' +
       '<p class="footer__heading">Support &amp; Legal</p>' +
       '<ul class="footer__links">' +
-      '<li><a href="contact.html">Contact</a></li>' +
+      '<li><a href="/contact">Contact</a></li>' +
       '<li><a href="mailto:support@peeledonion.in">Email support</a></li>' +
-      '<li><a href="privacy-policy.html">Privacy Policy</a></li>' +
-      '<li><a href="terms.html">Terms</a></li>' +
+      '<li><a href="/privacy-policy">Privacy Policy</a></li>' +
+      '<li><a href="/terms">Terms</a></li>' +
       '</ul>' +
       '</div>' +
       '<div>' +
       '<p class="footer__heading">Resources</p>' +
       '<ul class="footer__links">' +
-      '<li><a href="restaurant-billing-software.html">Restaurant Billing Software</a></li>' +
-      '<li><a href="restaurant-pos-billing.html">Restaurant POS Billing</a></li>' +
-      '<li><a href="gst-billing-software.html">GST Billing Software</a></li>' +
-      '<li><a href="inventory-management.html">Inventory Management</a></li>' +
-      '<li><a href="mobile-restaurant-billing-software.html">Mobile Restaurant Billing Software</a></li>' +
+      '<li><a href="/restaurant-billing-software">Restaurant Billing Software</a></li>' +
+      '<li><a href="/restaurant-pos-billing">Restaurant POS Billing</a></li>' +
+      '<li><a href="/gst-billing-software">GST Billing Software</a></li>' +
+      '<li><a href="/inventory-management">Inventory Management</a></li>' +
+      '<li><a href="/mobile-restaurant-billing-software">Mobile Restaurant Billing Software</a></li>' +
       '</ul>' +
       '</div>' +
       '</div>' +
@@ -100,6 +100,7 @@
     if (!btn || !menu) return;
     btn.addEventListener('click', function () {
       var isOpen = menu.classList.toggle('is-open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
       btn.setAttribute('aria-expanded', isOpen);
       var iconEl = btn.querySelector('.icon');
       if (iconEl) iconEl.className = 'icon icon--lg ' + (isOpen ? 'icon-close' : 'icon-menu');
