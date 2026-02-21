@@ -1,3 +1,16 @@
+# Redirect .html URLs to clean URLs (so links work locally and URLs stay pretty on Netlify)
+/index.html  /  301
+/contact.html  /contact  301
+/about.html  /about  301
+/features.html  /features  301
+/pricing.html  /pricing  301
+/terms.html  /terms  301
+/privacy-policy.html  /privacy-policy  301
+/restaurant-billing-software.html  /restaurant-billing-software  301
+/restaurant-pos-billing.html  /restaurant-pos-billing  301
+/gst-billing-software.html  /gst-billing-software  301
+/inventory-management.html  /inventory-management  301
+/mobile-restaurant-billing-software.html  /mobile-restaurant-billing-software  301
 # Pretty URLs: serve .html when clean path is requested
 /  /index.html  200
 /contact  /contact.html  200
@@ -11,5 +24,3 @@
 /gst-billing-software  /gst-billing-software.html  200
 /inventory-management  /inventory-management.html  200
 /mobile-restaurant-billing-software  /mobile-restaurant-billing-software.html  200
-# Strip .html from URL (rewrite so /terms.html is served as /terms)
-/*.html  /:splat  200
