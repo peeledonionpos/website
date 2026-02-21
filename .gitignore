@@ -1,0 +1,8 @@
+# macOS and temp
+.DS_Store
+**/.DS_Store
+.!*
+__MACOSX
+*.log
+.*.swp
+.*.swo

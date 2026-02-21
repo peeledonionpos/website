@@ -1,0 +1,14 @@
+# Do not publish to the public site
+.git
+.gitignore
+.netlifyignore
+.DS_Store
+**/.DS_Store
+.!*
+readme.md
+README.md
+OPTIMIZATION.md
+CODE-REVIEW.md
+indexnow-key.txt
+package-lock.json
+node_modules

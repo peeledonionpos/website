@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact PeeledOnion — Free Restaurant Billing Software</title>
+    <meta name="description"
+        content="Get in touch with the PeeledOnion team. We're here to help with questions about our free restaurant billing and POS software.">
+    <link rel="canonical" href="https://peeledonion.in/contact.html">
+    <!-- Replace with your actual verification codes -->
+    <!-- <meta name="google-site-verification" content="YOUR_ACTUAL_CODE"> -->
+    <!-- <meta name="msvalidate.01" content="YOUR_ACTUAL_CODE"> -->
+    <meta property="og:title" content="Contact PeeledOnion — Free Restaurant Billing Software">
+    <meta property="og:description" content="Reach out to the PeeledOnion team for support or questions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://peeledonion.in/contact.html">
+    <meta property="og:image" content="https://peeledonion.in/images/og-home.png">
+    <meta property="og:site_name" content="PeeledOnion">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="author" content="PeeledOnion">
+    <meta name="theme-color" content="#007CFF">
+    <link rel="alternate" hreflang="en-in" href="https://peeledonion.in/contact.html">
+    <link rel="alternate" hreflang="x-default" href="https://peeledonion.in/contact.html">
+    <link rel="stylesheet" href="styles.css">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PeeledOnion","url":"https://peeledonion.in","contactPoint":{"@type":"ContactPoint","email":"support@peeledonion.in","contactType":"customer support"}}</script>
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"PeeledOnion","url":"https://peeledonion.in"}</script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="layout-nav"></div>
+
+    <main id="main-content">
+        <div class="page-header">
+            <div class="container">
+                <h1 class="title-serif">Contact</h1>
+                <p>Get in touch. We’re ready to help.</p>
+            </div>
+        </div>
+        <hr class="divider">
+
+        <section class="section" aria-label="Contact form">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-form-col">
+                        <h2 class="title-serif">Send a message</h2>
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+                            aria-label="Contact form">
+                            <!-- Web3Forms hidden fields -->
+                            <input type="hidden" name="access_key" value="0603c725-12e1-4bbe-8285-dd1b982a762f">
+                            <input type="hidden" name="subject" value="New Lead from PeeledOnion Website">
+                            <input type="hidden" name="from_name" value="PeeledOnion Website">
+                            <!-- Honeypot spam protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1"
+                                autocomplete="off">
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your name"
+                                    required autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                    placeholder="10-digit mobile number" required pattern="[0-9]{10}" autocomplete="tel"
+                                    maxlength="10" inputmode="numeric"
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                                <span class="error-msg">Please enter a valid 10-digit number</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="language">Preferred Language</label>
+                                <select id="language" name="language" class="form-select" required>
+                                    <option value="" disabled selected>Select your preferred language</option>
+                                    <option value="English">English</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Tamil">Tamil</option>
+                                    <option value="Telugu">Telugu</option>
+                                    <option value="Kannada">Kannada</option>
+                                    <option value="Malayalam">Malayalam</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-textarea"
+                                    placeholder="How can we help?" required></textarea>
+                            </div>
+                            <button type="submit" id="contact-submit"
+                                class="btn btn--primary btn--lg btn--glow btn--w-full">Send
+                                message</button>
+                        </form>
+                    </div>
+
+                    <aside class="contact-sidebar">
+                        <div class="contact-info-card">
+                            <div class="contact-info-item">
+                                <p class="contact-info-label">Email us</p>
+                                <a href="mailto:support@peeledonion.in"
+                                    class="contact-info-value">support@peeledonion.in</a>
+                            </div>
+                            <div class="contact-info-item">
+                                <p class="contact-info-label">Average reply time</p>
+                                <p class="contact-info-value">1 – 2 business days</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="layout-footer"></div>
+
+    <!-- Snackbar notification -->
+    <div id="snackbar" class="snackbar" aria-live="polite"></div>
+
+    <script src="js/layout.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
