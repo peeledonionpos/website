@@ -5,8 +5,24 @@
  */
 (function () {
   var LAYOUT_CONFIG = {
-    blogUrl: 'https://blog.peeledonion.in/'
+    blogUrl: 'https://blog.peeledonion.in/',
+    favicon: 'images/fabicon.svg'
   };
+
+  function injectFavicon() {
+    var href = LAYOUT_CONFIG.favicon;
+    var existing = document.querySelector('link[rel="icon"]');
+    if (existing) {
+      existing.href = href;
+      existing.type = 'image/svg+xml';
+    } else {
+      var link = document.createElement('link');
+      link.rel = 'icon';
+      link.href = href;
+      link.type = 'image/svg+xml';
+      document.head.appendChild(link);
+    }
+  }
 
   /** Mockup HTML in one place so each page's HTML file stays small (no duplicated <picture>). */
   var MOCKUP_HTML =
@@ -116,6 +132,7 @@
   }
 
   function renderLayout() {
+    injectFavicon();
     var navEl = document.getElementById('layout-nav');
     var footerEl = document.getElementById('layout-footer');
     if (navEl) {

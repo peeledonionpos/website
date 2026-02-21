@@ -1,0 +1,26 @@
+# PeeledOnion
+
+> PeeledOnion is lifetime free, cloud-based restaurant billing and POS software for Indian restaurants, cafes, bakeries, and cloud kitchens.
+
+PeeledOnion offers GST-compliant billing, order management, KOT/kitchen display, menu management, inventory tracking, captain/staff app, and cloud storage. No installation or credit card required; works on any device. Target audience: restaurants, cafes, bakeries, cloud kitchens, QSRs, and food-service businesses in India.
+
+## Main
+
+- [Home](https://peeledonion.in/): Free restaurant billing software overview, features summary, how it works, testimonials, FAQ
+- [Features](https://peeledonion.in/features): Full feature list — billing, menu, KOT, inventory, staff app, cloud, multi-device
+- [Pricing](https://peeledonion.in/pricing): Lifetime free pricing; no monthly fees, no credit card; optional premium add-ons
+- [Contact](https://peeledonion.in/contact): Contact form and support
+- [About](https://peeledonion.in/about): About PeeledOnion and the product
+
+## Product guides
+
+- [Restaurant billing software](https://peeledonion.in/restaurant-billing-software): Guide to free restaurant billing for Indian restaurants
+- [Restaurant POS billing](https://peeledonion.in/restaurant-pos-billing): POS and point-of-sale billing overview
+- [GST billing software](https://peeledonion.in/gst-billing-software): GST-compliant invoicing and tax billing
+- [Inventory management](https://peeledonion.in/inventory-management): Stock and ingredient-level inventory for restaurants
+- [Mobile restaurant billing](https://peeledonion.in/mobile-restaurant-billing-software): Mobile and tablet billing
+
+## Optional
+
+- [Terms of use](https://peeledonion.in/terms): Terms of service
+- [Privacy policy](https://peeledonion.in/privacy-policy): Privacy policy
