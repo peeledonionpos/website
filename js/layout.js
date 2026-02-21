@@ -9,6 +9,16 @@
     favicon: 'images/fabicon.svg'
   };
 
+  /** When not file://, set base so relative links resolve from site root (works on subpages and production). */
+  function ensureBaseForLinks() {
+    if (location.protocol === 'file:') return;
+    var existing = document.querySelector('base[href]');
+    if (existing) return;
+    var base = document.createElement('base');
+    base.href = '/';
+    document.head.insertBefore(base, document.head.firstChild);
+  }
+
   function injectFavicon() {
     var href = LAYOUT_CONFIG.favicon;
     var existing = document.querySelector('link[rel="icon"]');
@@ -142,6 +152,7 @@
   }
 
   function renderLayout() {
+    ensureBaseForLinks();
     injectFavicon();
     var navEl = document.getElementById('layout-nav');
     var footerEl = document.getElementById('layout-footer');
